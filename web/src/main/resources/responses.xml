@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <s:reponses xmlns:s="www.survey.knownledge.com/XMLSchema"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="www.survey.knownledge.com/XMLSchema file:/C:/Users/renh/Documents/survey/survey.xsd">
     <reponse>
         <respondent>
             <school>商学院</school>
@@ -10,27 +11,1457 @@
         </respondent>
         <anwsers>
             <idQuestion>1</idQuestion>
-            <itemNumber>1</itemNumber>
-            <itemNumber>2</itemNumber>
+            <itemNumber>3</itemNumber>
         </anwsers>
         <anwsers>
             <idQuestion>2</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>3</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>4</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>5</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>6</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>7</idQuestion>
             <itemNumber>3</itemNumber>
         </anwsers>
-          <anwsers>
+<anwsers>
             <idQuestion>8</idQuestion>
-            <itemNumber>3</itemNumber>
+            <itemNumber>2</itemNumber>
+            <itemNumber>5</itemNumber>
             <comment>我的其他原因</comment>
         </anwsers>
-    </reponse>
-    <reponse>
+<anwsers>
+            <idQuestion>9</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>10</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>11</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>12</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>13</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>14</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>15</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>16</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>17</idQuestion>
+            <itemNumber>2</itemNumber>
+            <comment>对于理论不够了解，对实验方法不够清楚</comment>
+        </anwsers>
+<anwsers>
+            <idQuestion>18</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>19</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>20</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>21</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>22</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>23</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>24</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>25</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>26</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>27</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>28</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>29</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>30</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>31</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>32</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>33</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>34</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>35</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>36</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>37</idQuestion>
+            <itemNumber>2</itemNumber>
+            <itemNumber>6</itemNumber>
+            <itemNumber>9</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>38</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>39</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>2</itemNumber>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>40</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>2</itemNumber>
+            <itemNumber>4</itemNumber>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>41</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>43</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>44</idQuestion>
+            <itemNumber>3</itemNumber>
+            <itemNumber>4</itemNumber>
+            <itemNumber>7</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>45</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>46</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>47</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>48</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+</reponse>
+<reponse>
         <respondent>
-            <school>资源与环境工程学院</school>
+            <school>商学院</school>
             <status>硕士研究生</status>
         </respondent>
         <anwsers>
             <idQuestion>1</idQuestion>
-            <comment>comment2</comment>
+            <itemNumber>1</itemNumber>
         </anwsers>
-    </reponse>
+        <anwsers>
+            <idQuestion>2</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>3</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>4</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>5</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>6</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>7</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>10</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>11</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>12</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>13</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>14</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>15</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>17</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>18</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>20</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>21</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>22</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>23</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>24</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>25</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>26</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>27</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>28</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>29</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>30</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>31</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>32</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>33</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>34</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>35</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>36</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>38</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>40</idQuestion>
+            <itemNumber>2</itemNumber>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>41</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>43</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>45</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>46</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>47</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>48</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+</reponse>
+<reponse>
+        <respondent>
+            <school>商学院</school>
+            <status>硕士研究生</status>
+        </respondent>
+        <anwsers>
+            <idQuestion>1</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+        <anwsers>
+            <idQuestion>2</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>3</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>4</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>5</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>6</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>7</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>10</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>11</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>12</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>13</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>14</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>15</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>17</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>18</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>20</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>21</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>22</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>23</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>24</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>25</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>26</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>27</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>28</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>29</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>30</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>31</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>32</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>33</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>34</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>35</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>36</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>38</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>40</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>2</itemNumber>
+            <itemNumber>4</itemNumber>
+            <itemNumber>7</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>41</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>43</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>45</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>46</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>47</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>48</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+</reponse>
+<reponse>
+        <respondent>
+            <school>商学院</school>
+            <status>硕士研究生</status>
+        </respondent>
+        <anwsers>
+            <idQuestion>1</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+        <anwsers>
+            <idQuestion>2</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>3</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>4</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>5</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>6</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>7</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>10</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>11</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>12</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>13</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>14</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>15</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>17</idQuestion>
+            <itemNumber>4</itemNumber>
+            <comment>自己本身掌握的知识不够</comment>
+        </anwsers>
+<anwsers>
+            <idQuestion>18</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>19</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>20</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>21</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>22</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>23</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>24</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>25</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>26</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>27</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>28</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>29</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>30</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>31</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>32</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>33</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>34</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>35</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>36</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>37</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>2</itemNumber>
+            <itemNumber>6</itemNumber>
+            <itemNumber>7</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>38</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>40</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>2</itemNumber>
+            <itemNumber>4</itemNumber>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>41</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>43</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>44</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>4</itemNumber>
+            <itemNumber>7</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>45</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>46</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>47</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>48</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+</reponse>
+<reponse>
+        <respondent>
+            <school>商学院</school>
+            <status>硕士研究生</status>
+        </respondent>
+        <anwsers>
+            <idQuestion>1</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+        <anwsers>
+            <idQuestion>2</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>3</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>4</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>5</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>6</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>7</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>10</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>11</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>12</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>13</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>14</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>15</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>17</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>18</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>20</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>21</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>22</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>23</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>24</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>25</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>26</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>27</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>28</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>29</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>30</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>31</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>32</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>33</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>34</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>35</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>36</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>38</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+
+<anwsers>
+            <idQuestion>40</idQuestion>
+            <itemNumber>2</itemNumber>
+            <itemNumber>4</itemNumber>
+            <itemNumber>6</itemNumber>
+            <itemNumber>7</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>41</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>42</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>43</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>45</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>46</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>47</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>48</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+</reponse>
+ <reponse>
+        <respondent>
+            <school>商学院</school>
+            <status>硕士研究生</status>
+        </respondent>
+        <anwsers>
+            <idQuestion>1</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+        <anwsers>
+            <idQuestion>2</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>3</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>4</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>5</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>6</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>7</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+            <idQuestion>10</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>11</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>12</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>13</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>14</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>15</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>17</idQuestion>
+            <itemNumber>4</itemNumber>
+            <comment>目标不够清楚</comment>
+        </anwsers>
+<anwsers>
+            <idQuestion>18</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>20</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>21</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>22</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>23</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>24</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>25</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>26</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>27</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>28</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>29</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>30</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>31</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>32</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>33</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>34</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>35</idQuestion>
+            <itemNumber>4</itemNumber>
+            <comment>可以建一个电子化的平台作为知识分享的渠道，便于大家交流</comment>
+        </anwsers>
+<anwsers>
+            <idQuestion>36</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>37</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>3</itemNumber>
+            <itemNumber>4</itemNumber>
+            <itemNumber>7</itemNumber>
+            <itemNumber>9</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>38</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>40</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>2</itemNumber>
+            <itemNumber>4</itemNumber>
+            <itemNumber>5</itemNumber>
+            <itemNumber>6</itemNumber>
+            <itemNumber>7</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>41</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>43</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>44</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>2</itemNumber>
+            <itemNumber>3</itemNumber>
+            <itemNumber>4</itemNumber>
+            <itemNumber>5</itemNumber>
+            <itemNumber>6</itemNumber>
+            <itemNumber>7</itemNumber>        </anwsers>
+<anwsers>
+            <idQuestion>45</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>46</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>47</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>48</idQuestion>
+            <itemNumber>4</itemNumber>
+            <comment>电子化的沟通和交流平台，有效的项目规划软件</comment>
+        </anwsers>
+</reponse>
+<reponse>
+        <respondent>
+            <school>商学院</school>
+            <status>硕士研究生</status>
+        </respondent>
+        <anwsers>
+            <idQuestion>1</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+        <anwsers>
+            <idQuestion>2</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>3</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>4</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>5</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>6</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>7</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>10</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>11</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>12</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>13</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>14</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>15</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>17</idQuestion>
+            <itemNumber>4</itemNumber>
+            <comment>硬件设备不够完备</comment>
+        </anwsers>
+<anwsers>
+            <idQuestion>18</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>20</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>21</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>22</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>23</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>24</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>25</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>26</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>27</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>28</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>29</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>30</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>31</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>32</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>33</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>34</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>35</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>36</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>38</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>40</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>2</itemNumber>
+            <itemNumber>3</itemNumber>
+            <itemNumber>4</itemNumber>
+            <itemNumber>5</itemNumber>
+            <itemNumber>6</itemNumber>
+            <itemNumber>7</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>41</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>43</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>45</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>46</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>47</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>48</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+</reponse>
+ <reponse>
+        <respondent>
+            <school>商学院</school>
+            <status>博士研究生</status>
+        </respondent>
+        <anwsers>
+            <idQuestion>1</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+        <anwsers>
+            <idQuestion>2</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>3</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>4</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>5</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>6</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>7</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>10</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>11</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>12</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>13</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>14</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>15</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>16</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>17</idQuestion>
+            <itemNumber>5</itemNumber>
+            <comment>很多杂事的影响，当然包括情感方面。</comment>
+        </anwsers>
+<anwsers>
+            <idQuestion>18</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>20</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>21</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>22</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>23</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>24</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>25</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>26</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>27</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>28</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>29</idQuestion>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>30</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>31</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>32</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>33</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>34</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>35</idQuestion>
+            <itemNumber>3</itemNumber>
+            <comment>老师的知识水平需要提高，他们很难提出有意义或者对论文水平的level有显著提高的问题；同学们很少会认真听与自己“相同研究方向但不同热点”的论文汇报</comment>
+        </anwsers>
+<anwsers>
+            <idQuestion>36</idQuestion>
+            <itemNumber>4</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>38</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>40</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>2</itemNumber>
+            <itemNumber>5</itemNumber>
+            <itemNumber>7</itemNumber>
+            <itemNumber>10</itemNumber>
+            <comment>突然从脑海中蹦出的新想法，比如说梦境中</comment>
+        </anwsers>
+<anwsers>
+            <idQuestion>41</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>42</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>43</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>45</idQuestion>
+            <itemNumber>5</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>46</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>47</idQuestion>
+            <itemNumber>1</itemNumber>
+        </anwsers>
+<anwsers>
+            <idQuestion>48</idQuestion>
+            <itemNumber>5</itemNumber>
+            <comment>研究所的网络太慢；研究所的硬件很差，比如说桌子太矮，几个小时坐下来，颈椎就会很酸；还没有过于熟练地掌握matlab软件</comment>
+        </anwsers>
+</reponse>
+
+
+
+   
+
+
+
+
 </s:reponses>
