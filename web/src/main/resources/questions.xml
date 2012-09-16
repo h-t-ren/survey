@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:questions xmlns:s="www.survey.knownledge.com/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <question>
+        <id>1</id>
+        <name>通常您会利用校内图书馆来搜索文献的频率是？</name>
+        <questionType>评价性</questionType>
+        <part>第一部分：收集相关材料的情况</part>
+        <reversed>false</reversed>
+        <item>总是</item>
+        <item>经常</item>
+        <item>有时</item>
+        <item>很少</item>
+        <item>从不</item>
+    </question>
+    <question>
+        <id>2</id>
+        <name>通常您会利用在线期刊数据库来搜索文献的频率是？</name>
+        <questionType>评价性</questionType>
+        <part>第一部分：收集相关材料的情况</part>
+        <reversed>false</reversed>
+        <item>总是</item>
+        <item>经常</item>
+        <item>有时</item>
+        <item>很少</item>
+        <item>从不</item>
+    </question>
+    <!-- 请录入第一部分的另外3个评价性问题 -->
+    <question>
+        <id>6</id>
+        <name>在华理，您可以得到足够多的信息和资源，来帮助您高效的完成工作</name>
+        <questionType>评价性</questionType>
+        <part>第一部分：收集相关材料的情况</part>
+        <reversed>true</reversed>
+        <item>完全不同意</item>
+        <item>基本不同意</item>
+        <item>没有意见</item>
+        <item>基本同意</item>
+        <item>完全同意</item>
+    </question>
+    <!-- 请录入第一部分的另外1个评价性问题（reversed=true） -->
+    <question>
+        <id>8</id>
+        <name>如果第3题的答案不是“基本同意”或“完全同意”，您的原因是（可以多选）：？</name>
+        <questionType>控制性</questionType>
+        <part>第一部分：收集相关材料的情况</part>
+        <item>我对IT技术不熟悉，无法搜索到相关信息和知识</item>
+        <item>我不知道能在哪里找到我需要的知识</item>
+        <item>我不知道我需要的是哪种信息</item>
+        <item>我们的信息和计算机系统需要得到改进</item>
+        <item>信息量太大我无法分辨信息的重要性</item>
+        <item>其他原因</item>
+    </question>
+    <!-- 请录入第一部分的另外1个评价性问题 -->
+    
+    
+    <question>
+        <id>10</id>
+        <name>学习和训练如何做实验（包括理论、方法和技能）对于您能够有效率地进行实验工作的重要性程度是？</name>
+        <questionType>重要性</questionType>
+        <part>第二部分：实验性工作的相关情况</part>
+        <item>非常重要</item>
+        <item>重要</item>
+        <item>有点重要</item>
+        <item>不重要</item>
+        <item>非常不重要</item>
+    </question>
+    <!-- 请录入第二部分的另外个2个评价性问题，5个重要性问题，2个控制性问题 -->
+    
+    <!-- 请录入第三部分、第四部分、第五部分 -->
+</s:questions>

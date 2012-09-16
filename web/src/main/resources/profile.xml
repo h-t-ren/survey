@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:profile xmlns:s="www.survey.knownledge.com/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <preference>
+      <id>1</id>
+      <name>basic_regular</name>
+      <method>basic_rfp</method>
+      <description>the most basic achievement function with regular reference profile distributions</description>
+      <parameter>0.2</parameter>
+      <referencePoint>36</referencePoint>
+      <referencePoint>28</referencePoint>
+      <referencePoint>20</referencePoint>
+      <referencePoint>12</referencePoint>
+      <referencePoint>4</referencePoint>
+      <selected>false</selected>
+   </preference>
+   <preference>
+      <id>2</id>
+      <name>basic_demanding</name>
+      <method>basic_rfp</method>
+      <description>the most basic achievement function with demanding reference profile distributions</description>
+      <parameter>0.2</parameter>
+      <referencePoint>48</referencePoint>
+      <referencePoint>26</referencePoint>
+      <referencePoint>14</referencePoint>
+      <referencePoint>8</referencePoint>
+      <referencePoint>4</referencePoint>
+      <selected>false</selected>
+   </preference>
+   <preference>
+      <id>3</id>
+      <name>basic_stepwise</name>
+      <method>basic_rfp</method>
+      <description>the most basic achievement function with demanding stepwise profile distributions</description>
+      <parameter>0.2</parameter>
+      <referencePoint>42</referencePoint>
+      <referencePoint>42</referencePoint>
+      <referencePoint>7</referencePoint>
+      <referencePoint>5</referencePoint>
+      <referencePoint>4</referencePoint>
+      <selected>false</selected>
+   </preference>
+   <preference>
+      <id>4</id>
+      <name>basic_average</name>
+      <method>basic_rfp</method>
+      <description>the most basic achievement function with average reference profile distributions</description>
+      <parameter>0.2</parameter>
+      <referencePoint>21</referencePoint>
+      <referencePoint>38</referencePoint>
+      <referencePoint>22</referencePoint>
+      <referencePoint>14</referencePoint>
+      <referencePoint>5</referencePoint>
+      <selected>false</selected>
+   </preference>
+  
+   <preference>
+      <id>5</id>
+      <name>enhanced_regular</name>
+      <method>enhanced_rfp</method>
+      <description>the enhanced achievement function with regular reference profile distributions</description>
+      <parameter>0.2</parameter>
+      <referencePoint>36</referencePoint>
+      <referencePoint>28</referencePoint>
+      <referencePoint>20</referencePoint>
+      <referencePoint>12</referencePoint>
+      <referencePoint>4</referencePoint>
+      <selected>false</selected>
+   </preference>
+   <preference>
+      <id>6</id>
+      <name>enhanced_demanding</name>
+      <method>enhanced_rfp</method>
+      <description>the enhanced achievement function with demanding reference profile distributions</description>
+      <parameter>0.2</parameter>
+      <referencePoint>48</referencePoint>
+      <referencePoint>26</referencePoint>
+      <referencePoint>14</referencePoint>
+      <referencePoint>8</referencePoint>
+      <referencePoint>4</referencePoint>
+      <selected>false</selected>
+   </preference>
+   <preference>
+      <id>7</id>
+      <name>enhanced_stepwise</name>
+      <method>enhanced_rfp</method>
+      <description>the enhanced achievement function with demanding stepwise profile distributions</description>
+      <parameter>0.2</parameter>
+      <referencePoint>42</referencePoint>
+      <referencePoint>42</referencePoint>
+      <referencePoint>7</referencePoint>
+      <referencePoint>5</referencePoint>
+      <referencePoint>4</referencePoint>
+      <selected>true</selected>
+   </preference>
+   <preference>
+      <id>8</id>
+      <name>enhanced_average</name>
+      <method>enhanced_rfp</method>
+      <description>the enhanced achievement function with average reference profile distributions</description>
+      <parameter>0.2</parameter>
+      <referencePoint>21</referencePoint>
+      <referencePoint>38</referencePoint>
+      <referencePoint>22</referencePoint>
+      <referencePoint>14</referencePoint>
+      <referencePoint>5</referencePoint>
+      <selected>false</selected>
+   </preference>
+</s:profile>
