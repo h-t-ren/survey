@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:reponses xmlns:s="www.survey.knownledge.com/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <reponse>
+        <respondent>
+            <school>商学院</school>
+            <status>硕士研究生</status>
+            <name>王佳珣</name>
+            <email>anita10723@gmail.com</email>
+        </respondent>
+        <anwsers>
+            <idQuestion>1</idQuestion>
+            <itemNumber>1</itemNumber>
+            <itemNumber>2</itemNumber>
+        </anwsers>
+        <anwsers>
+            <idQuestion>2</idQuestion>
+            <itemNumber>3</itemNumber>
+        </anwsers>
+          <anwsers>
+            <idQuestion>8</idQuestion>
+            <itemNumber>3</itemNumber>
+            <comment>我的其他原因</comment>
+        </anwsers>
+    </reponse>
+    <reponse>
+        <respondent>
+            <school>资源与环境工程学院</school>
+            <status>硕士研究生</status>
+        </respondent>
+        <anwsers>
+            <idQuestion>1</idQuestion>
+            <comment>comment2</comment>
+        </anwsers>
+    </reponse>
+</s:reponses>
