@@ -35,11 +35,11 @@ public class ResponseTest {
 			for(Reponse r:rs.getReponse())
 			{
 				log.debug(r.getRespondent().getSchool().name());
-				result.setQuestion(value);
+
 				List<Anwser> answers = r.getAnwsers();
 				for(Anwser a:answers)
 				{
-					a.g
+
 				}
 			}
 		} catch (IOException e) {

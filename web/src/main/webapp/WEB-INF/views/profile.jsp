@@ -3,8 +3,8 @@
 <%@ include file="header.jsp" %>
 <style type="text/css">
 #containerx{width:800px;border:1px solid #ccc;}
-#containerx .box1{width:380px;float: left;background:red;}
-#containerx .box2{margin-left: 40px;width:380px;float:left;background: green;}
+#containerx .box1{width:380px;float: left;}
+#containerx .box2{margin-left: 40px;width:380px;float:left;}
 </style>
 	<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {

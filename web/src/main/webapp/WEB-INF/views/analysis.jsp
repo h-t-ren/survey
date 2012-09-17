@@ -43,10 +43,10 @@ $(document).ready(function () {
 			,	south__spacing_open:	2		// no resizer-bar when open (zero height)
 			,	south__spacing_closed:	2		// big resizer-bar when open (zero height)
 			//	some pane-size settings
-			,	west__minSize:			300
+			,	west__minSize:			200
 			,   center__onresize:		"innerLayout.resizeAll" 
 			});	
-		myLayout.sizePane("west", 450);
+		myLayout.sizePane("west", 300);
 		myLayout.sizePane("south", 30);
 		
 		innerLayout = $('div.middle-center').layout({ 	
@@ -80,8 +80,29 @@ $(document).ready(function () {
 
 
 </div> 
-<form>
-<div class="ui-layout-west">submenu</div> 
+<form action="<c:url value="/analysis" />" method="post">
+<div class="ui-layout-west">
+<fieldset><legend>请选择分析范围：</legend>
+   <c:forEach var="criterion" items="${criteria}">
+   <c:if test="${criterion.id==1}"> <input type="radio" name="criterion" <c:if test="${criterion.id==idCriterion}">checked</c:if> value="${criterion.name}" />${criterion.name}</c:if>
+   </c:forEach>
+   <hr/>
+    <b>状态：</b><br/>
+    <c:forEach var="criterion" items="${criteria}">
+     <c:if test="${criterion.id>1 && criterion.id<7}"> <input type="radio" name="criterion" <c:if test="${criterion.id==idCriterion}">checked</c:if> value="${criterion.name}" />${criterion.name}<br/></c:if>
+   </c:forEach>
+    <hr/>
+     <b>所在学院：</b><br/>
+    <c:forEach var="criterion" items="${criteria}">
+      <c:if test="${criterion.id>6}"><input type="radio" name="criterion" <c:if test="${criterion.id==idCriterion}">checked</c:if> value="${criterion.name}" />${criterion.name}<br/></c:if>
+   </c:forEach>
+   <hr/>
+   <button type="submit" name="solve" style="width: 112px;">开始分析</button>
+</fieldset>
+
+</div> 
+
+
 <div class="ui-layout-center">
 <div class="middle-center" style="height:100%;width:100%;">
  <div class="ui-layout-center">center</div>
