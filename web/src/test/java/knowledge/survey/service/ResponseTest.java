@@ -37,7 +37,7 @@ public class ResponseTest {
 			{
 				log.debug(r.getRespondent().getSchool().name());
 				//result.setQuestion(value);
-			//	result.getItemResult().add(e)
+				result.getItemResult().add(e)
 				List<Anwser> answers = r.getAnwsers();
 				for(Anwser a:answers)
 				{

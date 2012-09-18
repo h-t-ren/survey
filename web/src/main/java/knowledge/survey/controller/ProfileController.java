@@ -68,7 +68,7 @@ public class ProfileController {
 		} catch (IOException e) {
 			log.debug(e.getMessage());
 		}
-          return "main";
+          return "redirect:/analysis";
      }
 
 }
