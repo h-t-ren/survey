@@ -6,6 +6,7 @@ import java.io.IOException;
 import javax.xml.transform.Source;
 
 import knowledge.survey.oxm.ObjectFactory;
+import knowledge.survey.oxm.Question;
 import knowledge.survey.oxm.Questions;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,18 @@ public class QuestionServiceImpl implements QuestionService{
 	    questions = (Questions) marshaller.unmarshal(questionsSource);
 		 return questions;
 		
+	}
+
+	@Override
+	public Question findQuestion(Questions questions, int idQuestion) {
+		for(Question q:questions.getQuestion())
+		{
+			if(q.getId()==idQuestion)
+			{
+				return q;
+			}
+		}
+		return null;
 	}
 
 

@@ -37,7 +37,6 @@ public class ResponseTest {
 			{
 				log.debug(r.getRespondent().getSchool().name());
 				//result.setQuestion(value);
-				result.getItemResult().add(e)
 				List<Anwser> answers = r.getAnwsers();
 				for(Anwser a:answers)
 				{
@@ -51,9 +50,14 @@ public class ResponseTest {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
-	
-
+	@Test
+   public void generateResultsTest()
+   {
+		try {
+			responseService.generateResults("responses", "全部");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+   }
 }

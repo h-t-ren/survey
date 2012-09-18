@@ -32,7 +32,7 @@
    <div dojoType="dijit.layout.BorderContainer" style="width: 100%; height: 100%">
      <div id="header_toolbar" dojoType="dijit.layout.ContentPane" region="top">
          <div id="nav_top"> 
-                <div id="app_area">实验室知识管理相关情况调查问卷分析系统</div>
+                <div id="app_area">华东理工大学实验室知识管理相关情况调查问卷分析系统</div>
                 <div id="navmenu">
                     <ul id="nav">
                        <li><a class="headerActiveLink"  href="<c:url value="/" />">介绍</a></li>

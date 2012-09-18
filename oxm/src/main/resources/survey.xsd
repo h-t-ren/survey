@@ -24,13 +24,20 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>    
-
+<xs:element name="results">
+<xs:complexType>
+            <xs:sequence>
+                <xs:element ref="s:result" minOccurs="1"  maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+</xs:element>
     <xs:element name="result">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="question" type="s:question" minOccurs="1" maxOccurs="1" />
                 <xs:element name="itemResult" type="s:itemResult" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element name="score" type="xs:float" minOccurs="0" maxOccurs="1"/>
+                <xs:element name="totalNumber" type="xs:int" minOccurs="0" maxOccurs="1"/>
                 <xs:element name="sequence" type="xs:int" minOccurs="0" maxOccurs="1"/>
                 <xs:element name="comment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>

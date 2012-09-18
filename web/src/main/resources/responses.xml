@@ -943,6 +943,7 @@
             <idQuestion>7</idQuestion>
             <itemNumber>4</itemNumber>
         </anwsers>
+        <anwsers>
             <idQuestion>10</idQuestion>
             <itemNumber>2</itemNumber>
         </anwsers>
@@ -1422,7 +1423,7 @@
             <itemNumber>2</itemNumber>
             <itemNumber>5</itemNumber>
             <itemNumber>7</itemNumber>
-            <itemNumber>10</itemNumber>
+            <itemNumber>8</itemNumber>
             <comment>突然从脑海中蹦出的新想法，比如说梦境中</comment>
         </anwsers>
 <anwsers>
