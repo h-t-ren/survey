@@ -82,6 +82,89 @@ $(document).ready(function () {
 </div> 
 <form action="<c:url value="/analysis" />" method="post">
 <div class="ui-layout-west">
+<fieldset><legend>预设的参考点法：</legend>
+<c:if test="${preference==null}">目前无预设参考点法，<a href="<c:url value="/profile"/>">请预设</a></c:if>
+${preference.name}, epsilon=${preference.parameter} <br/>
+   <script type="text/javascript">
+		            	var chart;
+			            $(document).ready(function() {
+				          chart = new Highcharts.Chart({
+					      chart: {
+						    renderTo: 'chartcontainer_${preference.id}',
+						    defaultSeriesType: 'column'
+					      },
+					      exporting:
+					      {
+						    enabled:false
+					      },
+					      title: {
+						    text: null
+					      },
+					      xAxis: {
+				            categories:['A','B','C','D','E'],
+				            labels:{
+					        enabled:false
+				            }
+					      },
+					      yAxis: {
+						    min: 0,
+						    allowDecimals:false,
+						    labels:{
+						       enabled:false
+					            },
+					            
+						    title: {
+							  text: '',
+							  align: 'high'
+						    }
+					      },
+					      plotOptions: {
+						    column: {
+							  dataLabels: {
+								enabled: true
+							}
+						 },
+							series:{
+								pointWidth:10,
+								minPointLength:2
+							}
+					    },
+					     legend:
+					     {
+					    	 /*
+					    	 labelFormatter:function()
+					    	 {
+					    		 return 'fitness:';
+					    	 }
+					       */
+						    enabled:false
+					     },
+					     credits: {
+						   enabled: false
+					     },
+					     tooltip:{
+							    formatter: function()
+							    {
+								  return this.x+': <b>'+this.y+'</b>';
+							    }
+						     },
+				         series:[{data:[${distribution}]}]
+				      },function(chart)
+				         {
+				        	 var yAxis= chart.yAxis[0];
+				        	 yAxis.options.startOntick=false;
+				        	 yAxis.options.endOnTick=false;
+				         } 
+				          
+				          );
+				          
+			       });	
+		
+		           </script>
+		 <div id="chartcontainer_${preference.id}" style="width: 200px; height:100px;overflow:auto; margin: 0 auto" ></div>
+</fieldset>
+
+
 <fieldset><legend>请选择分析范围：</legend>
    <c:forEach var="criterion" items="${criteria}">
    <c:if test="${criterion.id==1}"> <input type="radio" name="criterion" <c:if test="${criterion.id==idCriterion}">checked</c:if> value="${criterion.name}" />${criterion.name}</c:if>
@@ -96,10 +179,10 @@ $(document).ready(function () {
     <c:forEach var="criterion" items="${criteria}">
       <c:if test="${criterion.id>6}"><input type="radio" name="criterion" <c:if test="${criterion.id==idCriterion}">checked</c:if> value="${criterion.name}" />${criterion.name}<br/></c:if>
    </c:forEach>
-   <hr/>
-   <button type="submit" name="solve" style="width: 112px;">开始分析</button>
+  
 </fieldset>
 
+ <button type="submit" name="solve" style="width: 112px;">开始分析</button>
 </div> 
 
 

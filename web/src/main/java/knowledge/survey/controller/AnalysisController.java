@@ -6,8 +6,11 @@ import java.util.List;
 
 import knowledge.survey.domain.Criterion;
 import knowledge.survey.oxm.ObjectFactory;
+import knowledge.survey.oxm.Preference;
+import knowledge.survey.oxm.Profile;
 import knowledge.survey.oxm.School;
 import knowledge.survey.oxm.Status;
+import knowledge.survey.service.ProfileService;
 import knowledge.survey.service.QuestionService;
 
 import org.slf4j.Logger;
@@ -25,11 +28,15 @@ public class AnalysisController {
 	@Autowired QuestionService questionService;
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	private ObjectFactory objectFactory = new ObjectFactory();
+	@Autowired ProfileService profileService;
+	private final String profileName="profile";
+	
     @RequestMapping(value = "/analysis",
             method = RequestMethod.GET, 
             headers="Accept=application/html, application/xhtml+xml")
      public String handleGetAnalysis(Model model) {
     	model.addAttribute("criteria", loadCrieria());
+        loadPreference(model);
           return "analysis";
      }
 
@@ -72,5 +79,40 @@ public class AnalysisController {
     		i++;
     	}
     	return criteria;
+    }
+    
+    private void loadPreference(Model model)
+    {
+    	 try {
+ 			Profile profile =profileService.getProfile(profileName);
+ 			for(Preference p: profile.getPreference())
+ 			{
+ 				if(p.isSelected())
+ 				{
+ 					model.addAttribute("preference", p);
+ 					String distribution="";
+ 	 				int i=0;
+ 	 				for(int point: p.getReferencePoint())
+ 	 				{
+ 	 					i++;
+ 	 					if(i<5)
+ 	 					{
+ 	 						distribution = distribution+point +",";
+ 	 					}
+ 	 					else
+ 	 					{
+ 	 						distribution = distribution+point;
+ 	 					}
+ 	 					model.addAttribute("distribution", distribution);
+ 	 				}
+ 				}
+ 				
+ 				
+ 			}
+ 			
+ 		} catch (IOException e) {
+ 			log.debug("no profile xml file was defined");
+ 		}
+           
     }
 }
