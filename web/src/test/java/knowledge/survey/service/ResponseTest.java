@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.List;
 
 import knowledge.survey.oxm.Anwser;
+import knowledge.survey.oxm.ItemResult;
 import knowledge.survey.oxm.ObjectFactory;
 import knowledge.survey.oxm.Reponse;
 import knowledge.survey.oxm.Reponses;
@@ -35,11 +36,16 @@ public class ResponseTest {
 			for(Reponse r:rs.getReponse())
 			{
 				log.debug(r.getRespondent().getSchool().name());
-				result.setQuestion(value);
+				//result.setQuestion(value);
+			//	result.getItemResult().add(e)
 				List<Anwser> answers = r.getAnwsers();
 				for(Anwser a:answers)
 				{
-					a.g
+					for(int itemNo:a.getItemNumber())
+					{
+						ItemResult ir =objectFactory.createItemResult();
+						ir.setItemNumber(itemNo);
+					}
 				}
 			}
 		} catch (IOException e) {
