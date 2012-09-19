@@ -13,12 +13,11 @@
 <link rel="stylesheet" href="<c:url value="/resources/styles/left_menu-style.css" />" type="text/css" media="screen" />
 <script type="text/javascript" src="<c:url value="/resources/javascript/dojo.xd.js" />" djConfig="parseOnLoad: true"> </script>
 <script type="text/javascript" src="<c:url value="/resources/javascript/jquery-1.4.4.min.js" />"></script>
-<script type="text/javascript"src="<c:url value="/resources/javascript/jquery-ui-latest.js" />"></script>
+<script type="text/javascript" src="<c:url value="/resources/javascript/jquery.dataTables.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/resources/javascript/jquery-ui-latest.js" />"></script>
 <script type="text/javascript" src="<c:url value="/resources/javascript/jquery.layout-latest.js" />"></script> 
 <script type="text/javascript" src="<c:url value="/resources/javascript/highchart/highcharts.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/resources/javascript/highchart/modules/exporting.js"/>"></script>
-<script type="text/javascript" src="<c:url value="/resources/javascript/jquery.dataTables.js"/>"></script>
-
 <!--[if lt IE 8]>
 <link rel="stylesheet" href="<c:url value="/resources/styles/blueprint/ie.css"/>" type="text/css" media="screen, projection" />
 <![endif]-->
@@ -131,12 +130,6 @@ ${preference.name}, epsilon=${preference.parameter} <br/>
 					    },
 					     legend:
 					     {
-					    	 /*
-					    	 labelFormatter:function()
-					    	 {
-					    		 return 'fitness:';
-					    	 }
-					       */
 						    enabled:false
 					     },
 					     credits: {
@@ -190,19 +183,37 @@ ${preference.name}, epsilon=${preference.parameter} <br/>
 <div class="middle-center" style="height:100%;width:100%;">
  <div class="ui-layout-center">
  <c:if test="${results!=null}" >
+ <fieldset><legend>最好结果排名：</legend>
  <script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
+				//jQuery.noConflict();
 				$('#highlight').dataTable( {
-					 "bPaginate": false,
+					// "bPaginate": false,
 					 "bInfo":false,
 					 "bFilter":false,
-					 "bSort": false
+					 "fnDrawCallback": function ( oSettings ) {
+							var that = this;
+							/* Need to redo the counters if filtered or sorted */
+							if ( oSettings.bSorted || oSettings.bFiltered )
+							{
+								$("#highlight tr td:first-child").each( function (i) {
+									that.fnUpdate( i+1, this.parentNode, 0, false, false );
+								} );
+							}
+						},
+						"aoColumnDefs": [
+							{ "bSortable": false, "aTargets": [ 0 ] }
+						],
+						 "iDisplayLength":10,
+					// "bSort": false,
+					 "aaSorting": [[ 4, "desc" ]]
 				} );
 			} );
 		</script>
   <table class="display" id="highlight">
         <thead>
           <tr>
+            <th>排名</th>
             <th>问题编号</th>
             <th>问题名称</th>
             <th>问题类型</th>
@@ -211,10 +222,11 @@ ${preference.name}, epsilon=${preference.parameter} <br/>
         </thead>
         <tbody>
        
-        <c:forEach var="result" items="${results}">
+        <c:forEach var="result" items="${results}" varStatus="status">
         
         <c:if test="${result.question.questionType!='控制性'}">
             <tr>
+                <td>${status.count}</td>
                 <td>${result.question.id}</td>
                 <td>${result.question.name}</td>
                 <td>${result.question.questionType}</td>
@@ -224,6 +236,63 @@ ${preference.name}, epsilon=${preference.parameter} <br/>
         </c:forEach>
         </tbody>
     </table>
+ </fieldset>
+  <fieldset><legend>最坏结果排名：</legend>
+ <script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				//jQuery.noConflict();
+				$('#highlight1').dataTable( {
+					// "bPaginate": false,
+					 "bInfo":false,
+					 "bFilter":false,
+					 "fnDrawCallback": function ( oSettings ) {
+							var that = this;
+							/* Need to redo the counters if filtered or sorted */
+							if ( oSettings.bSorted || oSettings.bFiltered )
+							{
+								$("#highlight1 tr td:first-child").each( function (i) {
+									that.fnUpdate( i+1, this.parentNode, 0, false, false );
+								} );
+							}
+						},
+						"aoColumnDefs": [
+							{ "bSortable": false, "aTargets": [ 0 ] }
+						],
+						 "iDisplayLength":10,
+					// "bSort": false,
+					 "aaSorting": [[ 4, "asc" ]]
+				} );
+			} );
+		</script>
+  <table class="display" id="highlight1">
+        <thead>
+          <tr>
+            <th>排名</th>
+            <th>问题编号</th>
+            <th>问题名称</th>
+            <th>问题类型</th>
+            <th>得分</th>
+            </tr>
+        </thead>
+        <tbody>
+       
+        <c:forEach var="result" items="${results}" varStatus="status">
+        
+        <c:if test="${result.question.questionType!='控制性'}">
+            <tr>
+                <td>${status.count}</td>
+                <td>${result.question.id}</td>
+                <td>${result.question.name}</td>
+                <td>${result.question.questionType}</td>
+                 <td>${result.score}</td>
+            </tr>
+       </c:if>
+        </c:forEach>
+        </tbody>
+    </table>
+ </fieldset>
+ 
+ 
  
  </c:if>
  

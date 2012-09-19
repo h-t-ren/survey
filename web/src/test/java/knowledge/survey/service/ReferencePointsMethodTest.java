@@ -29,12 +29,12 @@ public class ReferencePointsMethodTest {
 	@Test
 	public void referencePointsMethodTest()
 	{
-		try {
-			Preference	preference=profileService.getProfile("profile").getPreference().get(5);
-			referenceMethodService.solve(preference, "全部");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		//try {
+		//	Preference	preference=profileService.getProfile("profile").getPreference().get(5);
+		//	referenceMethodService.solve(preference, "全部");
+		//} catch (IOException e) {
+		//	e.printStackTrace();
+		//}
 		
 	}
 	

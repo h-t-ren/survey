@@ -957,7 +957,7 @@
 			 */
 			this.oLanguage = {
 				"sProcessing": "Processing...",
-				"sLengthMenu": "Show _MENU_ entries",
+				"sLengthMenu": "显示 _MENU_ 个问题",
 				"sZeroRecords": "No matching records found",
 				"sEmptyTable": "No data available in table",
 				"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
