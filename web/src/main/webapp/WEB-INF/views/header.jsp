@@ -35,10 +35,11 @@
                 <div id="app_area">华东理工大学实验室知识管理相关情况调查问卷分析系统</div>
                 <div id="navmenu">
                     <ul id="nav">
-                       <li><a class="headerActiveLink"  href="<c:url value="/" />">介绍</a></li>
-                       <li><a class="headerActiveLink"  href="<c:url value="/questionList" />">问题列表</a></li>
- 	                   <li><a class="headerActiveLink"  href="<c:url value="/profile" />">偏好</a></li>
- 	                   <li><a class="headerActiveLink"  href="<c:url value="/analysis" />">分析</a></li>
+                       <li><a class="headerActiveLink"  href="<c:url value="/" />">系统介绍</a></li>
+                        <li><a class="headerActiveLink"  href="<c:url value="/respondent" />">答卷情况</a></li>
+                        <li><a class="headerActiveLink"  href="<c:url value="/questionList" />">答卷统计</a></li>
+ 	                   <li><a class="headerActiveLink"  href="<c:url value="/profile" />">偏好设置</a></li>
+ 	                   <li><a class="headerActiveLink"  href="<c:url value="/analysis" />">答卷分析</a></li>
                     </ul>
                  </div>
                  <div id="other_area"></div>
