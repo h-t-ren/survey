@@ -95,7 +95,6 @@ public class ResponseServiceImpl implements ResponseService{
 	    		if(j<results.getResult().get(i).getItemResult().size()-1)
 	    		{
 	    			percentage= (num*100/totalNum);
-	    			System.out.println("num: "+ num+", total: " + totalNum +", per: " + percentage);
 		    		totalPercentage = totalPercentage+percentage;
 	    		}
 	    		else

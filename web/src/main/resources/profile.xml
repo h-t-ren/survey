@@ -25,7 +25,7 @@
       <referencePoint>14</referencePoint>
       <referencePoint>8</referencePoint>
       <referencePoint>4</referencePoint>
-      <selected>false</selected>
+      <selected>true</selected>
    </preference>
    <preference>
       <id>3</id>
@@ -91,7 +91,7 @@
       <referencePoint>7</referencePoint>
       <referencePoint>5</referencePoint>
       <referencePoint>4</referencePoint>
-      <selected>true</selected>
+      <selected>false</selected>
    </preference>
    <preference>
       <id>8</id>
