@@ -12,6 +12,8 @@ import knowledge.survey.oxm.School;
 import knowledge.survey.oxm.Status;
 import knowledge.survey.service.ProfileService;
 import knowledge.survey.service.QuestionService;
+import knowledge.survey.service.ReferenceMethodService;
+import knowledge.survey.service.ResultsService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +30,9 @@ public class AnalysisController {
 	@Autowired QuestionService questionService;
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	private ObjectFactory objectFactory = new ObjectFactory();
-	@Autowired ProfileService profileService;
+	@Autowired private ProfileService profileService;
+	@Autowired private ReferenceMethodService referenceMethodService;
+	@Autowired private ResultsService resultsService;
 	private final String profileName="profile";
 	
     @RequestMapping(value = "/analysis",
@@ -36,6 +40,7 @@ public class AnalysisController {
             headers="Accept=application/html, application/xhtml+xml")
      public String handleGetAnalysis(Model model) {
     	model.addAttribute("criteria", loadCrieria());
+    	model.addAttribute("idCriterion", 1);
         loadPreference(model);
           return "analysis";
      }
@@ -44,6 +49,13 @@ public class AnalysisController {
             method = RequestMethod.POST, 
             headers="Accept=application/html, application/xhtml+xml")
      public String handleAnalysis(@RequestParam("criterion") String criterion, Model model) {
+    	Preference preference=  loadPreference(model);
+    	try {
+			referenceMethodService.solve(preference, criterion);
+			model.addAttribute("results", resultsService.getResults(criterion).getResult());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     	List<Criterion> criteria = loadCrieria();
     	model.addAttribute("criteria", criteria);
     	Criterion c=  findCriterion(criteria, criterion);
@@ -81,7 +93,7 @@ public class AnalysisController {
     	return criteria;
     }
     
-    private void loadPreference(Model model)
+    private Preference loadPreference(Model model)
     {
     	 try {
  			Profile profile =profileService.getProfile(profileName);
@@ -105,14 +117,15 @@ public class AnalysisController {
  	 					}
  	 					model.addAttribute("distribution", distribution);
  	 				}
+ 	 				return p;
  				}
  				
  				
  			}
- 			
  		} catch (IOException e) {
  			log.debug("no profile xml file was defined");
  		}
+		return null;
            
     }
 }

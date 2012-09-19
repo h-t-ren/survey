@@ -188,7 +188,53 @@ ${preference.name}, epsilon=${preference.parameter} <br/>
 
 <div class="ui-layout-center">
 <div class="middle-center" style="height:100%;width:100%;">
- <div class="ui-layout-center">center</div>
+ <div class="ui-layout-center">
+ <c:if test="${results!=null}" >
+ <script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#highlight').dataTable( {
+					 "bPaginate": false,
+					 "bInfo":false,
+					 "bFilter":false,
+					 "bSort": false
+				} );
+			} );
+		</script>
+  <table class="display" id="highlight">
+        <thead>
+          <tr>
+            <th>问题编号</th>
+            <th>问题名称</th>
+            <th>问题类型</th>
+            <th>得分</th>
+            </tr>
+        </thead>
+        <tbody>
+       
+        <c:forEach var="result" items="${results}">
+        
+        <c:if test="${result.question.questionType!='控制性'}">
+            <tr>
+                <td>${result.question.id}</td>
+                <td>${result.question.name}</td>
+                <td>${result.question.questionType}</td>
+                 <td>${result.score}</td>
+            </tr>
+       </c:if>
+        </c:forEach>
+        </tbody>
+    </table>
+ 
+ </c:if>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </div>
  </div>
 </div> 
 </form>

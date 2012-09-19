@@ -9,6 +9,8 @@ import knowledge.survey.oxm.ObjectFactory;
 import knowledge.survey.oxm.Reponse;
 import knowledge.survey.oxm.Reponses;
 import knowledge.survey.oxm.Result;
+import knowledge.survey.oxm.School;
+import knowledge.survey.oxm.Status;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -56,6 +58,14 @@ public class ResponseTest {
    {
 		try {
 			responseService.generateResults("responses", "全部");
+			for(Status status: Status.values())
+			{
+				responseService.generateResults("responses",status.name());
+			}
+			for(School s: School.values())
+			{
+				responseService.generateResults("responses",s.name());
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

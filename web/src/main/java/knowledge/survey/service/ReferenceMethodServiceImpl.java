@@ -22,6 +22,7 @@ public class ReferenceMethodServiceImpl implements ReferenceMethodService {
 	private Logger log = LoggerFactory.getLogger(this.getClass());
 	private final int k=2;
 	@Autowired private ResultsService resultsService;
+
 	@Override
 	public void solve(Preference preference, String dataSet) throws IOException {
 	
