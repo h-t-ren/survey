@@ -69,11 +69,11 @@ $(document).ready(function () {
   <div id="other_area"></div>
    <div id="navmenu">
      <ul id="nav">
-        <li><a class="headerActiveLink"  href="<c:url value="/" />">系统介绍</a></li>
+          <li><a class="headerActiveLink"  href="<c:url value="/" />">系统介绍</a></li>
           <li><a class="headerActiveLink"  href="<c:url value="/respondent" />">答卷情况</a></li>
  	      <li><a class="headerActiveLink"  href="<c:url value="/questionList" />">答卷统计</a></li>
  	      <li><a class="headerActiveLink"  href="<c:url value="/profile" />">偏好设置</a></li>
- 	    <li><a class="headerActiveLink"  href="<c:url value="/analysis" />">答卷分析</a></li>
+ 	      <li><a class="headerDisabledLink"  href="<c:url value="/analysis" />">答卷分析</a></li>
      </ul>
   </div>
 </div>

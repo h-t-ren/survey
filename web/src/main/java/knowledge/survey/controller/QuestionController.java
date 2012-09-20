@@ -23,7 +23,9 @@ public class QuestionController {
             method = RequestMethod.GET, 
             headers="Accept=application/html, application/xhtml+xml")
      public String home(Model model) {
+    	 model.addAttribute("sitemap", "main");
           return "main";
+          
      }
 
     @RequestMapping(value = "/questionList",
@@ -35,6 +37,7 @@ public class QuestionController {
 		} catch (IOException e) {
 			log.debug( "no questions.xml file in the class path!");
 		}
+          model.addAttribute("sitemap", "questions");
           return "questions";
      }
     

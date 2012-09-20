@@ -34,21 +34,12 @@ a#headerActiveLink1:hover
 	font-weight:bold;
 	
 }
-a#headerDisabledLink
-{
-	color:white;
-    background-color: #585858;
-	text-docoration:none;
-	font-weight:bold;
-
-	
-}
 
 
 a#headerDisabledLink:hover
 {
-	color:black;
-    background-color: transparent;
+    color:white;
+	background-color: #97D474;
 	text-docoration:none;
 	font-weight:bold;
 	
@@ -171,8 +162,9 @@ ul#nav li.activelink a,ul#nav li.activelink a:hover {
 }
 
 ul#nav li a.headerDisabledLink,ul#nav li a.headerDisabledLink hover {
-  background: #585858;
-  color: black;
+  color:white;
+  background-color:  #97D474;
+  
 }
 
 

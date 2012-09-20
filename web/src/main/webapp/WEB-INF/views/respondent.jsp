@@ -70,7 +70,7 @@ $(document).ready(function () {
    <div id="navmenu">
      <ul id="nav">
        <li><a class="headerActiveLink"  href="<c:url value="/" />">系统介绍</a></li>
-       <li><a class="headerActiveLink"  href="<c:url value="/respondent" />">答卷情况</a></li>
+       <li><a class="headerDisabledLink"  href="<c:url value="/respondent" />">答卷情况</a></li>
        <li><a class="headerActiveLink"  href="<c:url value="/questionList" />">答卷统计</a></li>
  	   <li><a class="headerActiveLink"  href="<c:url value="/profile" />">偏好设置</a></li>
  	   <li><a class="headerActiveLink"  href="<c:url value="/analysis" />">答卷分析</a></li>
@@ -89,6 +89,13 @@ $(document).ready(function () {
 					 "bFilter":false,
 					 "bSort": false,
 				} );
+				$("#highlight tr").each( function (i) {
+					if(i==${idQuestion})
+						{
+						$(this).children('td').css('background-color','#008000');
+						}
+				} );
+				
 			} );
 		</script>
   <table class="display" id="highlight">
@@ -121,6 +128,49 @@ $(document).ready(function () {
 <div class="ui-layout-center">
 <div class="middle-center" style="height:100%;width:100%;">
  <div class="ui-layout-center">
+ 
+ 
+ <script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#highlight1').dataTable( {
+					 "bPaginate": false,
+					 "bInfo":false,
+					 "bFilter":false,
+					 "bSort": false
+				} );
+			} );
+		</script>
+  <table class="display" id="highlight1">
+        <thead>
+          <tr>
+            <th>您的答卷情况</th>
+            </tr>
+        </thead>
+        <tbody>
+       
+        <c:forEach var="entry" items="${questionMap}">
+            <tr>
+                <td><b>${entry.key.question.id}）${entry.key.question.name}</b> <br/>
+                   <c:forEach var="item" items="${entry.value}">
+                     &nbsp;&nbsp;<input type="checkbox" disabled="disabled" <c:if test="${item.selected}"> checked </c:if> />${item.item}<br/>
+                   </c:forEach>
+                   <c:if test="${entry.key.comment!=null}">
+                     <div style="background-color: #008000;">&nbsp;&nbsp;&nbsp;${entry.key.comment}</div> 
+                     </c:if>
+                 </td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  </div>
  </div>

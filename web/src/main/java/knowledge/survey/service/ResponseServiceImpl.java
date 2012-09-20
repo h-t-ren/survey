@@ -3,6 +3,9 @@ package knowledge.survey.service;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamResult;
 
@@ -136,5 +139,31 @@ public class ResponseServiceImpl implements ResponseService{
 			results.getResult().add(result);
 		}
 		return results;
+	}
+	@Override
+	public List<Integer> getItemNumbers(Reponse reponse, int idQuestion) {
+		List<Integer> itemNumbers = new ArrayList<Integer>(0);
+		
+		for(Anwser anwsers:reponse.getAnwsers())
+		{
+			if(anwsers.getIdQuestion()==idQuestion)
+			{
+				itemNumbers.addAll(anwsers.getItemNumber());
+				break;
+			}
+		}
+		return itemNumbers;
+	}
+	@Override
+	public Anwser getAnswer(Reponse reponse, int idQuestion) {
+
+		for(Anwser anwsers:reponse.getAnwsers())
+		{
+			if(anwsers.getIdQuestion()==idQuestion)
+			{
+				return anwsers;
+			}
+		}
+		return null;
 	}
 }

@@ -1,8 +1,6 @@
 package knowledge.survey.controller;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
-
 import knowledge.survey.oxm.Preference;
 import knowledge.survey.oxm.Profile;
 import knowledge.survey.service.ProfileService;
@@ -56,6 +54,7 @@ public class ProfileController {
 		} catch (IOException e) {
 			log.debug("no profile xml file was defined");
 		}
+    	  model.addAttribute("sitemap", "profile");
           return "profile";
      }
 
