@@ -41,6 +41,7 @@ public class RespondentController {
 		} catch (IOException e) {
 			log.debug( "no reponses.xml file in the class path!");
 		}
+          model.addAttribute("idQuestion",1100);
           return "respondent";
      }
     

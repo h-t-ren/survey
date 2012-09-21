@@ -48,7 +48,7 @@ public class AnalysisController {
     @RequestMapping(value = "/analysis",
             method = RequestMethod.POST, 
             headers="Accept=application/html, application/xhtml+xml")
-     public String handleAnalysis(@RequestParam("criterion") String criterion, Model model) {
+     public String handleAnalysis(@RequestParam("criterion") String criterion,@RequestParam("numQuestion") Integer numQuestion, Model model) {
     	Preference preference=  loadPreference(model);
     	try {
 			referenceMethodService.solve(preference, criterion);
@@ -60,6 +60,7 @@ public class AnalysisController {
     	model.addAttribute("criteria", criteria);
     	Criterion c=  findCriterion(criteria, criterion);
     	model.addAttribute("idCriterion", c.getId());
+    	model.addAttribute("numQuestion", numQuestion);
           return "analysis";
      }
 
