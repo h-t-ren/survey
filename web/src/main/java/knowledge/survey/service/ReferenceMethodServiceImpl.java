@@ -78,15 +78,15 @@ public class ReferenceMethodServiceImpl implements ReferenceMethodService {
 			float score = min+epsilon*sum;
 		
 			result.setScore(score);
-			log.debug("store: " +score);
+		//	log.debug("store: " +score);
 		}
 	}
 	private void enhancedReferencePointMethod(float epsilon, List<Integer> referencePoints,Results results)
 	{
 		float delta= 1+1/epsilon;
-		log.debug("delta:" + delta);
+	//	log.debug("delta:" + delta);
 		float parameter = 2/(k*(1+delta));
-		log.debug("parameter:" + parameter);
+	//	log.debug("parameter:" + parameter);
 		for(Result result: results.getResult())
 		{
 			
@@ -125,7 +125,7 @@ public class ReferenceMethodServiceImpl implements ReferenceMethodService {
 			}
 			float score = parameter*sumLeft+delta*sumright;
 			result.setScore(score);
-			log.debug("store: " +score);
+		//	log.debug("store: " +score);
 		}
 	}
 	

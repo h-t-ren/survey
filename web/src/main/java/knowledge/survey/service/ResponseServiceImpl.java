@@ -60,15 +60,6 @@ public class ResponseServiceImpl implements ResponseService{
 					int totalNumber=0;
                     for(int itemNumber:answer.getItemNumber())
                     {
-                    	if(idQuestion>49)
-                    	{
-                    		System.out.println("idQ:" + idQuestion);
-                    	}
-                    	if(itemNumber>10)
-                    	{
-                    		System.out.println("itemNumber:" + itemNumber);
-                    	}
-                    	
                     	int orgNumber =results.getResult().get(idQuestion-1).getItemResult().get(itemNumber-1).getNumber();
                     	results.getResult().get(idQuestion-1).getItemResult().get(itemNumber-1).setNumber(orgNumber+1);
                     	totalNumber++;

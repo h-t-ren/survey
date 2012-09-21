@@ -37,7 +37,7 @@ public class ResponseTest {
 			rs = responseService.getResponses("responses");
 			for(Reponse r:rs.getReponse())
 			{
-				log.debug(r.getRespondent().getSchool().name());
+				//log.debug(r.getRespondent().getSchool().name());
 				//result.setQuestion(value);
 				List<Anwser> answers = r.getAnwsers();
 				for(Anwser a:answers)

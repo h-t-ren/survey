@@ -2,6 +2,7 @@ package knowledge.survey.controller;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import knowledge.survey.domain.Criterion;
@@ -27,6 +28,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 
 @Controller
 public class QuestionController {
@@ -69,6 +72,8 @@ public class QuestionController {
     	    model.addAttribute("question", question);
     	    List<String> criteria = new ArrayList<String>(0);
     	    criteria.add("全部");
+    	    
+    	    model.addAttribute("selectedCriteria", criteria);
     	    String series = generateSeries(criteria, question);
     	    model.addAttribute("series", series);
     	    model.addAttribute("categories", generateCategories(question));
@@ -90,6 +95,55 @@ public class QuestionController {
 		return "question";
 	}
     
+    
+    
+    @RequestMapping(value = "/question/{id}", method = RequestMethod.POST, headers="Accept=application/html, application/xhtml+xml")
+  	public String handlePostQuestionRequest(@PathVariable("id") Integer id, @RequestParam(value="criteria", required=false) String[] selectedCriteria, Model model) {
+    	
+         model.addAttribute("sitemap", "question");
+         model.addAttribute("idQuestion", id);
+     	   model.addAttribute("criteria", loadCrieria());
+         try {
+      	    Questions questions =questionService.getQuestions("questions");
+      	    Question question =questionService.findQuestion(questions, id);
+      	    model.addAttribute("question", question);
+      	    List<String> criteria = new ArrayList<String>(0);
+      	    if(selectedCriteria==null)
+      	    {
+      	    	
+      	    }
+      	    else
+      	    {
+      		    for(String criterion:selectedCriteria)
+          	    {
+          	      criteria.add(criterion);
+          	    }
+          	  
+      	    }
+      	    model.addAttribute("selectedCriteria", criteria);
+      	    String series = generateSeries(criteria, question);
+      	    model.addAttribute("series", series);
+      	    model.addAttribute("categories", generateCategories(question));
+  			model.addAttribute("questions",questionService.getQuestions("questions"));
+  			
+  			Results results =resultsService.getResults("全部");
+  			for(Result result:results.getResult())
+  			{
+  				if(result.getQuestion().getId()==question.getId())
+  				{
+  					model.addAttribute("comments",result.getComment());
+  					break;
+  				}
+  			}
+  		
+  		} catch (IOException e) {
+  			log.debug( "no questions.xml file in the class path!");
+  		}
+  		return "question";
+  	}
+      
+    
+    
     private String generateSeries(List<String> criteria,Question question)
     {
      	//reference point
@@ -99,7 +153,12 @@ public class QuestionController {
     	{
     	    series ="{name:'参考点', data:[";
         	int i=0;
-        	for(int v: preference.getReferencePoint())
+        	List<Integer> rfs = preference.getReferencePoint();
+        	if(question.isReversed()!=null&&question.isReversed())
+        	{
+        		Collections.reverse(rfs);
+        	}
+        	for(int v: rfs)
         	{
         		if(i==0)
         		{

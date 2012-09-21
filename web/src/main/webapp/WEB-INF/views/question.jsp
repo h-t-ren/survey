@@ -81,7 +81,6 @@ $(document).ready(function () {
 
 
 </div> 
-<form action="<c:url value="/analysis" />" method="post">
 <div class="ui-layout-west">
 <fieldset><legend>请点击问题查看统计结果：</legend>
  <script type="text/javascript" charset="utf-8">
@@ -145,8 +144,8 @@ $(document).ready(function () {
         <tbody>
             <tr>
                 <td><b>${question.id}）${question.name}</b> <br/>
-                   <c:forEach var="item" items="${question.item}">
-                     &nbsp;&nbsp;<input type="checkbox" disabled="disabled"/>${item}<br>
+                   <c:forEach var="item" items="${question.item}" varStatus="status">
+                      &nbsp;&nbsp;第 ${status.count}选项：&nbsp;${item}<br>
                    </c:forEach>
                  </td>
             </tr>
@@ -208,12 +207,22 @@ $(document).ready(function () {
         });
     });
 </script>
-<form action="<c:url value="/analysis" />" method="post">
+<form action="<c:url value="/question/${question.id}" />" method="post">
 <div id="container" style="min-width:400px;width:800px; height: 400px;float:left; margin: 0 auto"></div>
-<div style="float:left;width:100%; margin: 0 auto"><c:forEach var="criterion" items="${criteria}">
- <input type="checkbox" name="criteria" />${criterion.name}&nbsp;
-</c:forEach></div>
+<fieldset style="float:left;width:100%; margin: 0 auto"><legend>请选择不同分组，在进行对比分析：：</legend>
+<div style="float:left;width:100%; margin: 0 auto">
+<c:forEach var="criterion" items="${criteria}">
+<c:set var="contains" value="false" />
+<c:forEach var="selectedC" items="${selectedCriteria}">
+  <c:if test="${selectedC eq criterion.name}">
+    <c:set var="contains" value="true" />
+  </c:if>
+</c:forEach>
+ <input type="checkbox" name="criteria" <c:if test="${contains}">checked</c:if> value="${criterion.name}" />${criterion.name}&nbsp;
+</c:forEach>
+</div>
  <div style="float:left; margin: 0 auto"> <button type="submit" name="analysis" style="width: 112px;">对比分析</button></div>
+ </fieldset>
  </form>
 </fieldset>
    <c:if test="${comments!=null&& !empty comments}">
@@ -253,7 +262,7 @@ $(document).ready(function () {
  </div>
  </div>
 </div> 
-</form>
+
 
 <div class="ui-layout-south" id="footer_copyrights">版权 &copy; &nbsp; 。。。</div> 
 

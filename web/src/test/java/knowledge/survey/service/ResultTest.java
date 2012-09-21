@@ -44,7 +44,7 @@ public class ResultTest {
 		
 		for(Result r:rs)
 		{
-			log.debug("sore: " +r.getScore());
+		//	log.debug("sore: " +r.getScore());
 		}
 		
 		
