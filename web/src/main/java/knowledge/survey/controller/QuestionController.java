@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import knowledge.survey.domain.Criterion;
 import knowledge.survey.oxm.ItemResult;
 import knowledge.survey.oxm.Preference;
 import knowledge.survey.oxm.Profile;
@@ -12,6 +13,8 @@ import knowledge.survey.oxm.QuestionType;
 import knowledge.survey.oxm.Questions;
 import knowledge.survey.oxm.Result;
 import knowledge.survey.oxm.Results;
+import knowledge.survey.oxm.School;
+import knowledge.survey.oxm.Status;
 import knowledge.survey.service.ProfileService;
 import knowledge.survey.service.QuestionService;
 import knowledge.survey.service.ResultsService;
@@ -59,6 +62,7 @@ public class QuestionController {
 	public String handleGetQuestionRequest(@PathVariable("id") Integer id, Model model) {
        model.addAttribute("sitemap", "question");
        model.addAttribute("idQuestion", id);
+   	   model.addAttribute("criteria", loadCrieria());
        try {
     	    Questions questions =questionService.getQuestions("questions");
     	    Question question =questionService.findQuestion(questions, id);
@@ -69,6 +73,17 @@ public class QuestionController {
     	    model.addAttribute("series", series);
     	    model.addAttribute("categories", generateCategories(question));
 			model.addAttribute("questions",questionService.getQuestions("questions"));
+			
+			Results results =resultsService.getResults("全部");
+			for(Result result:results.getResult())
+			{
+				if(result.getQuestion().getId()==question.getId())
+				{
+					model.addAttribute("comments",result.getComment());
+					break;
+				}
+			}
+		
 		} catch (IOException e) {
 			log.debug( "no questions.xml file in the class path!");
 		}
@@ -195,5 +210,24 @@ public class QuestionController {
  		}
 		return null;
            
+    }
+    
+    private List<Criterion> loadCrieria()
+    {
+    	List<Criterion> criteria = new ArrayList<Criterion>();
+    	Criterion all = new Criterion(1,"全部");
+    	criteria.add(all);
+    	int i=2;
+    	for(Status s:Status.values())
+    	{
+    		criteria.add(new Criterion(i,s.name()));
+    		i++;
+    	}
+    	for(School s:School.values())
+    	{
+    		criteria.add(new Criterion(i,s.name()));
+    		i++;
+    	}
+    	return criteria;
     }
 }

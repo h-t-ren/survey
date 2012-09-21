@@ -134,6 +134,25 @@ $(document).ready(function () {
 <div class="ui-layout-center">
 <div class="middle-center" style="height:100%;width:100%;">
  <div class="ui-layout-center">
+
+ <c:if test="${idQuestion!=1100}">
+    <table class="display">
+        <thead>
+          <tr>
+            <th>问题描述</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>${question.id}）${question.name}</b> <br/>
+                   <c:forEach var="item" items="${question.item}">
+                     &nbsp;&nbsp;<input type="checkbox" disabled="disabled"/>${item}<br>
+                   </c:forEach>
+                 </td>
+            </tr>
+        </tbody>
+    </table>
+ <fieldset>
  <script type="text/javascript">
   var chart;
     $(document).ready(function()
@@ -189,18 +208,44 @@ $(document).ready(function () {
         });
     });
 </script>
+<form action="<c:url value="/analysis" />" method="post">
+<div id="container" style="min-width:400px;width:800px; height: 400px;float:left; margin: 0 auto"></div>
+<div style="float:left;width:100%; margin: 0 auto"><c:forEach var="criterion" items="${criteria}">
+ <input type="checkbox" name="criteria" />${criterion.name}&nbsp;
+</c:forEach></div>
+ <div style="float:left; margin: 0 auto"> <button type="submit" name="analysis" style="width: 112px;">对比分析</button></div>
+ </form>
+</fieldset>
+   <c:if test="${comments!=null&& !empty comments}">
+	<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#highlight2').dataTable( {
+					 "bPaginate": false,
+					 "bInfo":false,
+					 "bFilter":false,
+					 "bSort": false
+				} );
+			} );
+		</script>
+  <table class="display" id="highlight2" style="float: left;">
+        <thead>
+          <tr>
+            <th>意见和建议: </th>
+            </tr>
+        </thead>
+        <tbody>
+       
+        <c:forEach var="comment" items="${comments}">
+            <tr>
+                <td>${comment}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
 
-<div id="container" style="min-width:400px;width:800px; height: 400px; margin: 0 auto"></div>
+</c:if>
 
-
-
-
-
-
-
-
-
-
+</c:if>
 
 
 
