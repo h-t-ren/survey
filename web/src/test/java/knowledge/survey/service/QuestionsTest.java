@@ -29,7 +29,7 @@ public class QuestionsTest {
 			qs = questionService.getQuestions("questions");
 			for(Question q:qs.getQuestion())
 			{
-				log.debug(q.getName());
+			//	log.debug(q.getName());
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

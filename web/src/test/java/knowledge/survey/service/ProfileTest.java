@@ -27,14 +27,14 @@ public class ProfileTest {
 			profile = profileService.getProfile("profile");
 			for(Preference p:profile.getPreference())
 			{
-				log.debug(p.getId() +", name: " + p.getName() +", parameter: " +p.getParameter() +", selected: " +p.isSelected());
-				log.debug("reference point distribution:");
+				//log.debug(p.getId() +", name: " + p.getName() +", parameter: " +p.getParameter() +", selected: " +p.isSelected());
+				//log.debug("reference point distribution:");
 				String distribution="";
 				for(int value: p.getReferencePoint())
 				{
 					distribution = distribution +value +" ";
 				}
-				log.debug(distribution);
+				//log.debug(distribution);
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
