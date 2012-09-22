@@ -1,9 +1,11 @@
 package knowledge.survey.controller;
 
+
 import java.io.IOException;
 import knowledge.survey.oxm.Preference;
 import knowledge.survey.oxm.Profile;
 import knowledge.survey.service.ProfileService;
+import knowledge.survey.util.FileNameEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,14 +20,13 @@ public class ProfileController {
 
 	@Autowired ProfileService profileService;
 	private Logger log = LoggerFactory.getLogger(this.getClass());
-	private final String profileName="profile";
 	
     @RequestMapping(value = "/profile",
             method = RequestMethod.GET, 
             headers="Accept=application/html, application/xhtml+xml")
      public String handleGetProfileRequest(Model model) {
     	  try {
-			Profile profile =profileService.getProfile(profileName);
+			Profile profile =profileService.getProfile(FileNameEnum.profile.name());
 			model.addAttribute("profile", profile);
 			String[] distributions= new String[profile.getPreference().size()];
 			int j=0;
@@ -63,7 +64,7 @@ public class ProfileController {
             headers="Accept=application/html, application/xhtml+xml")
      public String handleStoreProfileResponse(@RequestParam("idPref") int idPref) {
           try {
-			profileService.changeProfile(profileName, idPref);
+			profileService.changeProfile(FileNameEnum.profile.name(), idPref);
 		} catch (IOException e) {
 			log.debug(e.getMessage());
 		}

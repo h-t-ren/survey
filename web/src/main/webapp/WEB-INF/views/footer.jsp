@@ -1,7 +1,7 @@
  <%@page contentType="text/html;charset=UTF-8"%>
         </div>
             <div id="footer_copyrights" dojoType="dijit.layout.ContentPane" region="bottom">
-                                          版权 &copy; &nbsp; 。。。
+                                          版权 &copy; 任宏涛  
             </div>
         </div>
 

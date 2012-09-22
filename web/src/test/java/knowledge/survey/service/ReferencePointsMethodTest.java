@@ -7,8 +7,6 @@ import java.util.List;
 import knowledge.survey.oxm.ObjectFactory;
 import knowledge.survey.oxm.Preference;
 import knowledge.survey.oxm.Result;
-import knowledge.survey.util.Quicksort;
-import knowledge.survey.util.ResultComparator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;

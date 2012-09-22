@@ -5,10 +5,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamResult;
-
 import knowledge.survey.oxm.Anwser;
 import knowledge.survey.oxm.ItemResult;
 import knowledge.survey.oxm.ObjectFactory;
@@ -18,6 +16,7 @@ import knowledge.survey.oxm.Reponse;
 import knowledge.survey.oxm.Reponses;
 import knowledge.survey.oxm.Result;
 import knowledge.survey.oxm.Results;
+import knowledge.survey.util.FileNameEnum;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -50,7 +49,7 @@ public class ResponseServiceImpl implements ResponseService{
 		{
 			String school = reponse.getRespondent().getSchool().name();
 			String status = reponse.getRespondent().getStatus().name();
-			if(school.equals(filter)||status.equals(filter)||"全部".equals(filter))
+			if(school.equals(filter)||status.equals(filter)||FileNameEnum.全部.name().equals(filter))
 			{
 
 				for(Anwser answer:reponse.getAnwsers())
@@ -117,7 +116,7 @@ public class ResponseServiceImpl implements ResponseService{
 	private Results initializeResult() throws IOException
 	{
 		Results results = objectFactory.createResults();
-		Questions questions = questionService.getQuestions("questions");
+		Questions questions = questionService.getQuestions(FileNameEnum.questions.name());
 		for(Question q:questions.getQuestion())
 		{
 			Result result =objectFactory.createResult();

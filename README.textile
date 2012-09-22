@@ -1,0 +1,33 @@
+1）运行环境
+JDK 1.6 or above
+Maven 3.0.0 or above
+
+2） 编译源文件，安装源文件 （只需要运行一次）
+点击运行，输入cmd，进入项目文件目录：
+cd survey
+mvn clean install
+
+3）运行Tomcat
+cd web
+mvn -Dmaven.tomcat.uriEncoding=UTF-8 tomcat7:run
+
+4）浏览系统
+强烈建议使用firefox 或者 chrome 浏览器：
+http://127.0.0.1:9090/survey-web/
+
+5）关闭Tomcat
+在命令窗口： ctrl+c
+
+6)文件说明：
+样本数据文件： survey\web\src\main\resources\responses.xml
+调查问卷文件：survey\web\src\main\resources\questions.xml
+方法设置文件： survey\web\src\main\resources\profile.xml
+
+7)方法说明，系统预设了8个用户方法偏好：
+     具体请参照  survey\web\src\main\resources\profile.xml，和附件的文档
+    
+
+
+
+
+

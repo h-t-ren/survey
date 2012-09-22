@@ -4,21 +4,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import knowledge.survey.domain.Criterion;
 import knowledge.survey.oxm.ItemResult;
 import knowledge.survey.oxm.Preference;
-import knowledge.survey.oxm.Profile;
 import knowledge.survey.oxm.Question;
 import knowledge.survey.oxm.QuestionType;
 import knowledge.survey.oxm.Questions;
 import knowledge.survey.oxm.Result;
 import knowledge.survey.oxm.Results;
-import knowledge.survey.oxm.School;
-import knowledge.survey.oxm.Status;
 import knowledge.survey.service.ProfileService;
 import knowledge.survey.service.QuestionService;
 import knowledge.survey.service.ResultsService;
+import knowledge.survey.util.CriterionHelper;
+import knowledge.survey.util.FileNameEnum;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +26,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.ws.server.endpoint.annotation.RequestPayload;
+
 
 @Controller
 public class QuestionController {
@@ -53,7 +50,7 @@ public class QuestionController {
      public String handleGetQuestionListRequest(Model model) {
     	 model.addAttribute("idQuestion",1100);
           try {
-			model.addAttribute("questions",questionService.getQuestions("questions"));
+			model.addAttribute("questions",questionService.getQuestions(FileNameEnum.questions.name()));
 		} catch (IOException e) {
 			log.debug( "no questions.xml file in the class path!");
 		}
@@ -63,91 +60,102 @@ public class QuestionController {
     
     @RequestMapping(value = "/question/{id}", method = RequestMethod.GET, headers="Accept=application/html, application/xhtml+xml")
 	public String handleGetQuestionRequest(@PathVariable("id") Integer id, Model model) {
-       model.addAttribute("sitemap", "question");
-       model.addAttribute("idQuestion", id);
-   	   model.addAttribute("criteria", loadCrieria());
-       try {
-    	    Questions questions =questionService.getQuestions("questions");
-    	    Question question =questionService.findQuestion(questions, id);
-    	    model.addAttribute("question", question);
-    	    List<String> criteria = new ArrayList<String>(0);
-    	    criteria.add("全部");
-    	    
-    	    model.addAttribute("selectedCriteria", criteria);
-    	    String series = generateSeries(criteria, question);
-    	    model.addAttribute("series", series);
-    	    model.addAttribute("categories", generateCategories(question));
-			model.addAttribute("questions",questionService.getQuestions("questions"));
-			
-			Results results =resultsService.getResults("全部");
-			for(Result result:results.getResult())
-			{
-				if(result.getQuestion().getId()==question.getId())
-				{
-					model.addAttribute("comments",result.getComment());
-					break;
-				}
-			}
-		
-		} catch (IOException e) {
-			log.debug( "no questions.xml file in the class path!");
-		}
-		return "question";
+    	return  internal(id, null, model);
 	}
     
     
     
     @RequestMapping(value = "/question/{id}", method = RequestMethod.POST, headers="Accept=application/html, application/xhtml+xml")
   	public String handlePostQuestionRequest(@PathVariable("id") Integer id, @RequestParam(value="criteria", required=false) String[] selectedCriteria, Model model) {
-    	
-         model.addAttribute("sitemap", "question");
-         model.addAttribute("idQuestion", id);
-     	   model.addAttribute("criteria", loadCrieria());
-         try {
-      	    Questions questions =questionService.getQuestions("questions");
-      	    Question question =questionService.findQuestion(questions, id);
-      	    model.addAttribute("question", question);
-      	    List<String> criteria = new ArrayList<String>(0);
-      	    if(selectedCriteria==null)
-      	    {
-      	    	
-      	    }
-      	    else
-      	    {
-      		    for(String criterion:selectedCriteria)
-          	    {
-          	      criteria.add(criterion);
-          	    }
-          	  
-      	    }
-      	    model.addAttribute("selectedCriteria", criteria);
-      	    String series = generateSeries(criteria, question);
-      	    model.addAttribute("series", series);
-      	    model.addAttribute("categories", generateCategories(question));
-  			model.addAttribute("questions",questionService.getQuestions("questions"));
-  			
-  			Results results =resultsService.getResults("全部");
-  			for(Result result:results.getResult())
-  			{
-  				if(result.getQuestion().getId()==question.getId())
-  				{
-  					model.addAttribute("comments",result.getComment());
-  					break;
-  				}
-  			}
-  		
-  		} catch (IOException e) {
-  			log.debug( "no questions.xml file in the class path!");
-  		}
-  		return "question";
+  		return  internal(id, selectedCriteria, model);
   	}
       
+    @RequestMapping(value = "/result",
+            method = RequestMethod.GET, 
+            headers="Accept=application/html, application/xhtml+xml")
+     public String getQuestionDetails(@RequestParam("criterion") String criterion, @RequestParam("idQuestion") Integer idQuestion,Model model) {
+    	model.addAttribute("criteria", CriterionHelper.loadCrieria());
+
+        try {
+     	    Questions questions =questionService.getQuestions(FileNameEnum.questions.name());
+     	    Question question =questionService.findQuestion(questions, idQuestion);
+     	    model.addAttribute("question", question);
+     	    List<String> criteria = new ArrayList<String>(0);
+      	    criteria.add(criterion);
+     	    String series = generateSeries(model,criteria, question);
+     	    model.addAttribute("series", series);
+     	    model.addAttribute("categories", generateCategories(question));
+ 			
+ 			Results results =resultsService.getResults(FileNameEnum.全部.name());
+ 			for(Result result:results.getResult())
+ 			{
+ 				if(result.getQuestion().getId()==question.getId())
+ 				{
+ 					model.addAttribute("comments",result.getComment());
+ 					break;
+ 				}
+ 			}
+ 		
+ 		} catch (IOException e) {
+ 			log.debug( "no questions.xml file in the class path!");
+ 		}
+         return "result";
+     }
+
+    
+    private String internal(Integer id, String[] selectedCriteria, Model model)
+    {
+    	
+    	  model.addAttribute("sitemap", "question");
+          model.addAttribute("idQuestion", id);
+      	  model.addAttribute("criteria", CriterionHelper.loadCrieria());
+          try {
+       	    Questions questions =questionService.getQuestions(FileNameEnum.questions.name());
+       	    Question question =questionService.findQuestion(questions, id);
+       	    model.addAttribute("question", question);
+       	    List<String> criteria = new ArrayList<String>(0);
+       	    if(selectedCriteria==null)
+       	    {
+     	        criteria.add("全部");
+       	    }
+       	    else
+       	    {
+       		    for(String criterion:selectedCriteria)
+           	    {
+           	      criteria.add(criterion);
+           	    }
+           	  
+       	    }
+       	    model.addAttribute("selectedCriteria", criteria);
+       	    String series = generateSeries(model,criteria, question);
+       	    model.addAttribute("series", series);
+       	    model.addAttribute("categories", generateCategories(question));
+   			model.addAttribute("questions",questions);
+   			
+   			Results results =resultsService.getResults(FileNameEnum.全部.name());
+   			for(Result result:results.getResult())
+   			{
+   				if(result.getQuestion().getId()==question.getId())
+   				{
+   					model.addAttribute("comments",result.getComment());
+   					break;
+   				}
+   			}
+   		
+   		} catch (IOException e) {
+   			log.debug( "no questions.xml file in the class path!");
+   		}
+    	
+    	return "question";
+    }
     
     
-    private String generateSeries(List<String> criteria,Question question)
+    
+    
+    private String generateSeries(Model model,List<String> criteria,Question question)
     {
      	//reference point
-    	Preference preference = loadPreference();
+    	Preference preference = profileService.loadPreference(model);
     	String series="";
     	if(!question.getQuestionType().equals(QuestionType.控制性))
     	{
@@ -253,40 +261,7 @@ public class QuestionController {
     	
     	return categories;
     }
-    private Preference loadPreference()
-    {
-    	 try {
- 			Profile profile =profileService.getProfile("profile");
- 			for(Preference p: profile.getPreference())
- 			{
- 				if(p.isSelected())
- 				{
- 	 				return p;
- 				}
- 			}
- 		} catch (IOException e) {
- 			log.debug("no profile xml file was defined");
- 		}
-		return null;
-           
-    }
+
     
-    private List<Criterion> loadCrieria()
-    {
-    	List<Criterion> criteria = new ArrayList<Criterion>();
-    	Criterion all = new Criterion(1,"全部");
-    	criteria.add(all);
-    	int i=2;
-    	for(Status s:Status.values())
-    	{
-    		criteria.add(new Criterion(i,s.name()));
-    		i++;
-    	}
-    	for(School s:School.values())
-    	{
-    		criteria.add(new Criterion(i,s.name()));
-    		i++;
-    	}
-    	return criteria;
-    }
+    
 }

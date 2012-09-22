@@ -6,15 +6,16 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamResult;
-
 import knowledge.survey.oxm.Preference;
 import knowledge.survey.oxm.Profile;
+import knowledge.survey.util.FileNameEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 import org.springframework.xml.transform.ResourceSource;
 
 
@@ -61,6 +62,40 @@ public class ProfileServiceImpl implements ProfileService{
 		storeProfile(profile, profileFile);
 		
 	}
-
-
+	@Override
+	 public Preference loadPreference(Model model)
+	    {
+	    	 try {
+	 			Profile profile =getProfile(FileNameEnum.profile.name());
+	 			for(Preference p: profile.getPreference())
+	 			{
+	 				if(p.isSelected())
+	 				{
+	 					model.addAttribute("preference", p);
+	 					String distribution="";
+	 	 				int i=0;
+	 	 				for(int point: p.getReferencePoint())
+	 	 				{
+	 	 					i++;
+	 	 					if(i<5)
+	 	 					{
+	 	 						distribution = distribution+point +",";
+	 	 					}
+	 	 					else
+	 	 					{
+	 	 						distribution = distribution+point;
+	 	 					}
+	 	 					model.addAttribute("distribution", distribution);
+	 	 				}
+	 	 				return p;
+	 				}
+	 				
+	 				
+	 			}
+	 		} catch (IOException e) {
+	 
+	 		}
+			return null;
+	           
+	    }
 }

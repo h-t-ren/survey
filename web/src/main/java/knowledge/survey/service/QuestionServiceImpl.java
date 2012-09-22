@@ -2,13 +2,10 @@ package knowledge.survey.service;
 
 
 import java.io.IOException;
-
 import javax.xml.transform.Source;
-
 import knowledge.survey.oxm.ObjectFactory;
 import knowledge.survey.oxm.Question;
 import knowledge.survey.oxm.Questions;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

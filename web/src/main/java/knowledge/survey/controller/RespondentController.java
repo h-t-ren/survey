@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
 import knowledge.survey.domain.Item;
 import knowledge.survey.domain.QuestionCommemt;
 import knowledge.survey.oxm.Anwser;
@@ -14,6 +13,7 @@ import knowledge.survey.oxm.Questions;
 import knowledge.survey.oxm.Reponse;
 import knowledge.survey.service.QuestionService;
 import knowledge.survey.service.ResponseService;
+import knowledge.survey.util.FileNameEnum;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,7 +37,7 @@ public class RespondentController {
             headers="Accept=application/html, application/xhtml+xml")
      public String handleRespondentListRequest(Model model) {
           try {
-			model.addAttribute("responses",responseService.getResponses("responses").getReponse());
+			model.addAttribute("responses",responseService.getResponses(FileNameEnum.responses.name()).getReponse());
 		} catch (IOException e) {
 			log.debug( "no reponses.xml file in the class path!");
 		}
@@ -47,11 +47,11 @@ public class RespondentController {
     
     @RequestMapping(value = "/respondent/{id}", method = RequestMethod.GET, headers="Accept=application/html, application/xhtml+xml")
 	public String handleGetQuestionRequest(@PathVariable("id") Integer id, Model model) {
-    	log.debug("id: " +id);
+
     	try {
-    		List<Reponse> reponses =	responseService.getResponses("responses").getReponse();
+    		List<Reponse> reponses =	responseService.getResponses(FileNameEnum.responses.name()).getReponse();
     		Reponse reponse =reponses.get(id-1);
-    		Questions questions = questionService.getQuestions("questions");
+    		Questions questions = questionService.getQuestions(FileNameEnum.questions.name());
     		Map<QuestionCommemt,List<Item>> questionMap = new LinkedHashMap<QuestionCommemt, List<Item>>(0);
     		int i =1;
     		for(Question q: questions.getQuestion())

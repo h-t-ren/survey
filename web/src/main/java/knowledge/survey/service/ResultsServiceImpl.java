@@ -7,7 +7,6 @@ import java.io.IOException;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamResult;
 import knowledge.survey.oxm.Results;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

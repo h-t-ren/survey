@@ -264,7 +264,7 @@ $(document).ready(function () {
 </div> 
 
 
-<div class="ui-layout-south" id="footer_copyrights">版权 &copy; &nbsp; 。。。</div> 
+<div class="ui-layout-south" id="footer_copyrights"> 版权 &copy; 任宏涛  </div> 
 
 </body>
 

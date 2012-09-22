@@ -1,5 +1,6 @@
 <%@page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
@@ -21,7 +22,6 @@
 <!--[if lt IE 8]>
 <link rel="stylesheet" href="<c:url value="/resources/styles/blueprint/ie.css"/>" type="text/css" media="screen, projection" />
 <![endif]-->
-
 <SCRIPT type="text/javascript">
 var myLayout, innerLayout;
 
@@ -42,10 +42,10 @@ $(document).ready(function () {
 			,	south__spacing_open:	2		// no resizer-bar when open (zero height)
 			,	south__spacing_closed:	2		// big resizer-bar when open (zero height)
 			//	some pane-size settings
-			,	west__minSize:			200
+			//,	west__minSize:			10
 			,   center__onresize:		"innerLayout.resizeAll" 
 			});	
-		myLayout.sizePane("west", 360);
+//	myLayout.sizePane("west", 10);
 		myLayout.sizePane("south", 30);
 		
 		innerLayout = $('div.middle-center').layout({ 	
@@ -65,74 +65,100 @@ $(document).ready(function () {
 <body class="tundra">
 <div class="ui-layout-north" id="header_toolbar" >
 <div id="nav_top">
-  <div id="app_area"> 实验室知识管理相关情况调查问卷分析系统</div>
+  <div id="app_area">实验室知识管理相关情况调查问卷分析系统</div>
   <div id="other_area"></div>
    <div id="navmenu">
      <ul id="nav">
-       <li><a class="headerActiveLink"  href="<c:url value="/" />">系统介绍</a></li>
-       <li><a class="headerDisabledLink"  href="<c:url value="/respondent" />">答卷情况</a></li>
-       <li><a class="headerActiveLink"  href="<c:url value="/question" />">答卷统计</a></li>
- 	   <li><a class="headerActiveLink"  href="<c:url value="/profile" />">偏好设置</a></li>
- 	   <li><a class="headerActiveLink"  href="<c:url value="/analysis" />">答卷分析</a></li>
      </ul>
   </div>
 </div>
-</div> 
 
-<div class="ui-layout-west">
-<fieldset><legend>答卷者列表：</legend>
- <script type="text/javascript" charset="utf-8">
-			$(document).ready(function() {
-				$('#highlight').dataTable( {
-					 "bPaginate": false,
-					 "bInfo":false,
-					 "bFilter":false,
-					 "bSort": false,
-				} );
-				$("#highlight tr").each( function (i) {
-					if(i==${idQuestion})
-						{
-						$(this).children('td').css('background-color','#008000');
-						}
-				} );
-				
-			} );
-		</script>
-  <table id="highlight">
-        <thead>
-          <tr>
-            <th>编号</th>
-            <th>学院</th>
-            <th>状态</th>
-            <th>姓名</th>
-            <th>查看</th>
-            </tr>
-        </thead>
-        <tbody>
-       
-        <c:forEach var="response" items="${responses}" varStatus="status">
-            <tr>
-                <td>${status.count}</td>
-                <td>${response.respondent.school}</td>
-                <td>${response.respondent.status}</td>
-                <td>${response.respondent.name}</td>
-                 <td><a href="<c:url value="/respondent/${status.count}" />"><img src="<c:url value="/resources/images/crud/view.png" />"></a></td>
-            </tr>
-        </c:forEach>
-        </tbody>
-    </table>
-</fieldset>
-</div> 
 
+</div> 
 
 <div class="ui-layout-center">
 <div class="middle-center" style="height:100%;width:100%;">
  <div class="ui-layout-center">
- 
-  <c:if test="${questionMap!=null}">
- <script type="text/javascript" charset="utf-8">
+
+   <table class="display">
+        <thead>
+          <tr>
+            <th>问题描述</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>${question.id}）${question.name}</b> <br/>
+                   <c:forEach var="item" items="${question.item}" varStatus="status">
+                      &nbsp;&nbsp;第 ${status.count}选项：&nbsp;${item}<br>
+                   </c:forEach>
+                 </td>
+            </tr>
+        </tbody>
+    </table>
+ <fieldset>
+ <script type="text/javascript">
+  var chart;
+    $(document).ready(function()
+    {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'column'
+            },
+            title: {
+                text: '统计结果与参考点比较柱状图'
+            },
+            xAxis: {
+                categories: [${categories}]
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: '百分比:%'
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                backgroundColor: '#FFFFFF',
+                align: 'left',
+                verticalAlign: 'top',
+                x: 80,
+                y: 40,
+                floating: true,
+                shadow: true
+            },
+            tooltip: {
+                formatter: function() {
+                	var yValue
+                	if(this.y==0.5)
+                	    yValue = 0;
+                	else
+                		yValue = this.y
+                    return ''+
+                        this.x +': '+ yValue+' %';
+                }
+            },
+		     credits: {
+			   enabled: false
+		     },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+                series: [${series}]
+        });
+    });
+</script>
+<div id="container" style="min-width:400px;width:800px; height: 400px;float:left; margin: 0 auto"></div>
+
+
+ <c:if test="${comments!=null&& !empty comments}">
+	<script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
-				$('#highlight1').dataTable( {
+				$('#highlight2').dataTable( {
 					 "bPaginate": false,
 					 "bInfo":false,
 					 "bFilter":false,
@@ -140,38 +166,24 @@ $(document).ready(function () {
 				} );
 			} );
 		</script>
-  <table class="display" id="highlight1">
+  <table class="display" id="highlight2" style="float: left;">
         <thead>
           <tr>
-            <th>您的答卷情况</th>
+            <th>意见和建议: </th>
             </tr>
         </thead>
         <tbody>
        
-        <c:forEach var="entry" items="${questionMap}">
+        <c:forEach var="comment" items="${comments}">
             <tr>
-                <td><b>${entry.key.question.id}）${entry.key.question.name}</b> <br/>
-                   <c:forEach var="item" items="${entry.value}">
-                     &nbsp;&nbsp;<input type="checkbox" disabled="disabled" <c:if test="${item.selected}"> checked </c:if> /><c:if test="${item.selected}"><font color="blue">${item.item}</font></c:if><c:if test="${!item.selected}">${item.item}</c:if><br/>
-                   </c:forEach>
-                   <c:if test="${entry.key.comment!=null}">
-                    <font color="blue">&nbsp;&nbsp;&nbsp;${entry.key.comment}</font>
-                     </c:if>
-                 </td>
+                <td>${comment}</td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
- 
- 
- </c:if>
- 
- 
- 
- 
- 
- 
- 
+
+</c:if>
+
  </div>
  </div>
 </div> 

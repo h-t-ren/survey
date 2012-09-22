@@ -2,24 +2,18 @@ package knowledge.survey.service;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-
 import knowledge.survey.oxm.ItemResult;
 import knowledge.survey.oxm.Method;
 import knowledge.survey.oxm.Preference;
 import knowledge.survey.oxm.QuestionType;
 import knowledge.survey.oxm.Result;
 import knowledge.survey.oxm.Results;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("referenceMethodService")
 public class ReferenceMethodServiceImpl implements ReferenceMethodService {
-	private Logger log = LoggerFactory.getLogger(this.getClass());
 	private final int k=2;
 	@Autowired private ResultsService resultsService;
 

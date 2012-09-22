@@ -226,6 +226,7 @@ ${preference.name}, epsilon=${preference.parameter} <br/>
             <th>问题名称</th>
             <th>问题类型</th>
             <th>得分</th>
+            <th>查看</th>
             </tr>
         </thead>
         <tbody>
@@ -238,7 +239,8 @@ ${preference.name}, epsilon=${preference.parameter} <br/>
                 <td>${result.question.id}</td>
                 <td>${result.question.name}</td>
                 <td>${result.question.questionType}</td>
-                 <td>${result.score}</td>
+                <td>${result.score}</td>
+                <td><a href="<c:url value="/result?idQuestion=${result.question.id}&criterion=${criterionName}" />" target="blank"><img src="<c:url value="/resources/images/crud/view.png" />"></a></td>
             </tr>
        </c:if>
         </c:forEach>
@@ -280,6 +282,7 @@ ${preference.name}, epsilon=${preference.parameter} <br/>
             <th>问题名称</th>
             <th>问题类型</th>
             <th>得分</th>
+            <th>查看</th>
             </tr>
         </thead>
         <tbody>
@@ -292,7 +295,8 @@ ${preference.name}, epsilon=${preference.parameter} <br/>
                 <td>${result.question.id}</td>
                 <td>${result.question.name}</td>
                 <td>${result.question.questionType}</td>
-                 <td>${result.score}</td>
+                <td>${result.score}</td>
+                 <td><a href="<c:url value="/result?idQuestion=${result.question.id}&criterion=${criterionName}" />" target="blank"><img src="<c:url value="/resources/images/crud/view.png" />"></a></td>
             </tr>
        </c:if>
         </c:forEach>
@@ -316,7 +320,7 @@ ${preference.name}, epsilon=${preference.parameter} <br/>
 </div> 
 </form>
 
-<div class="ui-layout-south" id="footer_copyrights">版权 &copy; &nbsp; 。。。</div> 
+<div class="ui-layout-south" id="footer_copyrights">版权 &copy; 任宏涛  。</div> 
 
 </body>
 
